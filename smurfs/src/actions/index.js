@@ -17,6 +17,7 @@ export const getSmurfs = () => dispatch => {
 };
 
 export const postSmurfs = smurf => dispatch => {
+  dispatch({ type: POST_SMURFS });
   axios
     .post("http://localhost:3333/smurfs", smurf)
     .then(resolve => dispatch({ type: POST_SMURFS_SUCCESS, payload: resolve.data }))
