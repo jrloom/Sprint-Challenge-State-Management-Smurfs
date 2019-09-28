@@ -10,10 +10,14 @@ const SmurfForm = ({ postSmurfs }) => {
   const handleSubmit = event => {
     event.preventDefault();
     postSmurfs({
+      id: Date.now(),
       name,
       age,
       height
     });
+    setName("");
+    setAge("");
+    setHeight("");
   };
 
   return (
@@ -21,7 +25,7 @@ const SmurfForm = ({ postSmurfs }) => {
       <form onSubmit={handleSubmit}>
         <input type="text" name="name" value={name} onChange={event => setName(event.target.value)} placeholder="Name" />
         <input type="number" name="age" value={age} onChange={event => setAge(event.target.value)} placeholder="Age" />
-        <input type="number" name="height" value={height} onChange={event => setHeight(event.target.value)} placeholder="Height" />
+        <input type="text" name="height" value={height} onChange={event => setHeight(event.target.value)} placeholder="Height" />
         <button>Add to Smurfville</button>
       </form>
     </div>
