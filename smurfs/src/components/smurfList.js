@@ -26,9 +26,9 @@ const SmurfList = ({ smurfs, getSmurfs, isGetting, error }) => {
 };
 
 const mapStateToProps = state => ({
-  smurfs: state.listReducers.data,
-  isGetting: state.listReducers.isGetting,
-  error: state.listReducers.error
+  smurfs: state.data,
+  isGetting: state.isGetting,
+  error: state.error
 });
 
 export default connect(
