@@ -2,7 +2,7 @@ import { GET_SMURFS, GET_SMURFS_SUCCESS, GET_SMURFS_FAILURE } from "../actions";
 
 const initialState = {
   data: [],
-  isGetting: false,
+  isGetting: true,
   error: ""
 };
 
