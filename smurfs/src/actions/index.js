@@ -10,14 +10,14 @@ export const POST_SMURFS_FAILURE = "POST_SMURFS_FAILURE";
 
 export const getSmurfs = () => dispatch => {
   axios
-    .get("http://localhost:3333")
+    .get("http://localhost:3333/smurfs")
     .then(resolve => dispatch({ type: GET_SMURFS_SUCCESS, payload: resolve.data }))
     .catch(error => dispatch({ type: GET_SMURFS_FAILURE, payload: `${error.response.status} ${error.response.statusText}` }));
 };
 
 export const postSmurfs = () => dispatch => {
   axios
-    .get("http://localhost:3333")
+    .get("http://localhost:3333/smurfs")
     .then(resolve => dispatch({ type: POST_SMURFS_SUCCESS, payload: resolve.data }))
     .catch(error => dispatch({ type: POST_SMURFS_FAILURE, payload: `${error.response.status} ${error.response.statusText}` }));
 };
